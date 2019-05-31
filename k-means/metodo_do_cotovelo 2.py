@@ -13,13 +13,13 @@ from sklearn.decomposition import PCA
 
 
 dataRaw = [];
-DataFile = open("MopsiLocations2012-Joensuu.txt", "r")
+DataFile = open("NomeArquivo.txt", "r")
 
 while True:
     theline = DataFile.readline()
     if len(theline)== 0:
         break
-    readData = theline.split(" ") #use " " space to seperate two columes 
+    readData = theline.split(";") #use " " space to seperate two columes 
     
     for pos in range(len(readData)):
         readData[pos] = float(readData[pos]);
