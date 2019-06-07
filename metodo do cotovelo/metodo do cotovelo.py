@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sb
 from sklearn.cluster import KMeans
 
-df = sb.load_dataset('arquivo')
+df = sb.load_dataset('data-points.csv')
 
 sum_of_squares = []
     for i in range(2, 21):
