@@ -6,15 +6,11 @@ from sklearn.cluster import KMeans
 
 df = sb.load_dataset('arquivo')
 
-
 sum_of_squares = []
     for i in range(2, 21):
         kmeans = KMeans(n_clusters=i)
-        kmeans.fit(X=data)
+        kmeans.fit(X=df)
         sum_of_squares.append(kmeans.inertia_)
-
-
-		
 		
 		
 n = []
@@ -28,9 +24,6 @@ for j in range(len(sum_of_squares)):
 	numerator = abs((b2-b1)*x0 - (a2-b2)*b0 + a2*b1 - b2*a1)
 	denominator = sqrt((b2 - b1)**2 + (a2 - a1)**2)
 	n.append(numerator/denominator)
-
-
-
 
 
 kmeans = KMeans(n_clusters=n)
